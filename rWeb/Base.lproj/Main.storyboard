@@ -15,7 +15,8 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="rWeb" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="Quit rWeb" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit rWeb" id="4sb-4s-VLi">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -185,6 +186,6 @@
         <image name="chevronRight" width="180" height="170"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3EN-65-M7g"/>
+        <segue reference="cq2-FE-JQM"/>
     </inferredMetricsTieBreakers>
 </document>
