@@ -17,7 +17,7 @@ We used the Header bar like a home panel where people could quickly access certa
 
 The Saver Controller is a semi screen saver, containing one WebView. This is loaded with a promotional url which cycles through our custom what's on page.
 
-![Layout](appLayout.jpg "UI")
+![Layout](appLayout.png "UI")
 
 ### How to Customise
 We have left some of the variables open for you to customise the kiosk. Simply open the Config.plist and add your own urls, regex strings and timings.
