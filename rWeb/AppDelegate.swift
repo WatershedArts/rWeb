@@ -22,6 +22,7 @@ let dictIFrameIdleTimeKey = "iFrame Idle Time"
 let dictResetTimeKey = "Reset Time"
 let dictHeaderHeightKey = "Header Height"
 let dictCustomAgent = "Custom Agent"
+let dictCanForceQuit = "Can Force Quit"
 //---------------------------------------------
 // MARK: Get Dictionary
 //---------------------------------------------
@@ -40,7 +41,7 @@ var iFrameIdleTime:Int = Dict!.objectForKey(dictIFrameIdleTimeKey) as! Int
 var extraTime:Int = Dict!.objectForKey(dictResetTimeKey) as! Int
 var headerHeight = Dict!.objectForKey(dictHeaderHeightKey) as! CGFloat
 var customAgent = Dict!.objectForKey(dictCustomAgent) as! String
-
+var canForceQuit:Bool = Dict!.objectForKey(dictCanForceQuit) as! Bool
 var resetWebViewStandardTime:Int = standardIdleTime + extraTime
 var resetWebViewiFrameTime:Int = iFrameIdleTime + extraTime
 
@@ -67,11 +68,11 @@ class AppDelegate: NSObject, NSApplicationDelegate   {
         println("Reset Time --> \(extraTime)")
         println("Header Height --> \(headerHeight)")
         println("Custom Agent --> \(customAgent)")
+        println("Can Force Quit --> \(canForceQuit)")
         println("----------------------------------------------")
     }
     //---------------------------------------------
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
-    //---------------------------------------------
 }

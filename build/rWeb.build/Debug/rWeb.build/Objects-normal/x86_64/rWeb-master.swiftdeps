@@ -1,0 +1,9 @@
+version: "Apple Swift version 1.2 (swiftlang-602.0.53.1 clang-602.0.53)"
+options: "544b2c102e0ca7d673732dc82ab4ddbe"
+inputs: 
+- "/Users/david/Desktop/ICTDev/Kiosk/rWeb/rWeb/ViewControllers/WindowController.swift"
+- "/Users/david/Desktop/ICTDev/Kiosk/rWeb/rWeb/ViewControllers/SaverView.swift"
+- "/Users/david/Desktop/ICTDev/Kiosk/rWeb/rWeb/Segue/CustomSegue.swift"
+- "/Users/david/Desktop/ICTDev/Kiosk/rWeb/rWeb/ViewControllers/ViewController.swift"
+- "/Users/david/Desktop/ICTDev/Kiosk/rWeb/rWeb/AppDelegate.swift"
+- "/Users/david/Desktop/ICTDev/Kiosk/rWeb/rWeb/Segue/CustomSegueAnimator.swift"

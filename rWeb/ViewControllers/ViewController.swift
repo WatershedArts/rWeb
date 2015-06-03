@@ -80,7 +80,20 @@ class ViewController: NSViewController {
     }
     //----------------------------------------------
     override func viewDidAppear() {
-        let presOptions: NSApplicationPresentationOptions =
+        let presOptions: NSApplicationPresentationOptions
+        if canForceQuit == false {
+            presOptions =
+                .HideDock                  |   // Dock is entirely unavailable. Spotlight menu is disabled.
+                .HideMenuBar               |   // Menu Bar is Disabled
+                .DisableAppleMenu          |   // All Apple menu items are disabled.
+                .DisableProcessSwitching   |   // Cmd+Tab UI is disabled. All Exposé functionality is also disabled.
+                .DisableSessionTermination |   // PowerKey panel and Restart/Shut Down/Log Out are disabled.
+                .DisableHideApplication    |   // Application "Hide" menu item is disabled.
+                .AutoHideToolbar           |
+                .DisableForceQuit              // Cmd+Opt+Esc panel is disabled
+        }
+        else {
+            presOptions =
             .HideDock                  |   // Dock is entirely unavailable. Spotlight menu is disabled.
             .HideMenuBar               |   // Menu Bar is Disabled
             .DisableAppleMenu          |   // All Apple menu items are disabled.
@@ -88,7 +101,8 @@ class ViewController: NSViewController {
             .DisableSessionTermination |   // PowerKey panel and Restart/Shut Down/Log Out are disabled.
             .DisableHideApplication    |   // Application "Hide" menu item is disabled.
             .AutoHideToolbar
-
+        }
+        
         let optionsDictionary = [NSFullScreenModeApplicationPresentationOptions :
             NSNumber(unsignedLong: presOptions.rawValue)]
         

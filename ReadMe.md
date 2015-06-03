@@ -8,8 +8,12 @@ The application was written in **Swift** and **Objective-C**.
 
 We have stripped the application down so that you can implement your own Kiosk.
 
-### What is the Catch?
-We haven't yet stopped Command-Q from quitting the application, so either use a keyboard with no command key, or disable the command key in OS X somehow. 
+### What is the Catch? 
+<s>We haven't yet stopped Command-Q from quitting the application, so either use a keyboard with no command key, or disable the command key in OS X somehow. </s>
+
+Command-Q no longer quits the applcation.
+
+Users can also specify whether the application enables the Force Quit Menu. Simply enter the Config.plist and set the Can Force Quit to NO to lock out the Force Quit Menu.
 
 ### What is in the Application?
 
