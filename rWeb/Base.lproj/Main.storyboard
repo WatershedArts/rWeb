@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="7706"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+                        <items>
+                            <menuItem title="rWeb" id="1Xt-HY-uBw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="rWeb" systemMenu="apple" id="uQy-DD-JDr">
+                                    <items>
+                                        <menuItem title="Quit rWeb" keyEquivalent="q" id="4sb-4s-VLi">
+                                            <connections>
+                                                <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="rWeb" customModuleProvider="target"/>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="0.0"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="R2V-B0-nI4">
+            <objects>
+                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                    <window key="window" title="rWeb" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hasShadow="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="0.0" y="0.0" width="1440" height="900"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="400" height="300"/>
+                        <value key="maxSize" type="size" width="1920" height="1200"/>
+                    </window>
+                    <connections>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                    </connections>
+                </windowController>
+                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="-196"/>
+        </scene>
+        <!--Main View-->
+        <scene sceneID="hIz-AP-VOD">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="XfG-lQ-9wD" userLabel="Main View" customClass="ViewController" customModule="rWeb" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" identifier="ViewController" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="1440" height="900"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" translatesAutoresizingMaskIntoConstraints="NO" id="6Qd-da-trS" userLabel="Header">
+                                <rect key="frame" x="0.0" y="823" width="1440" height="77"/>
+                                <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12" javaEnabled="NO" javaScriptCanOpenWindowsAutomatically="NO">
+                                    <nil key="identifier"/>
+                                </webPreferences>
+                                <connections>
+                                    <outlet property="UIDelegate" destination="XfG-lQ-9wD" id="SyV-x7-fuh"/>
+                                    <outlet property="frameLoadDelegate" destination="XfG-lQ-9wD" id="tDn-sQ-G4L"/>
+                                </connections>
+                            </webView>
+                            <webView placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" translatesAutoresizingMaskIntoConstraints="NO" id="5Ij-RN-PWu" userLabel="Main">
+                                <rect key="frame" x="0.0" y="0.0" width="1440" height="823"/>
+                                <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12" javaEnabled="NO" javaScriptCanOpenWindowsAutomatically="NO">
+                                    <nil key="identifier"/>
+                                </webPreferences>
+                                <connections>
+                                    <outlet property="UIDelegate" destination="XfG-lQ-9wD" id="Z4W-7a-KkN"/>
+                                    <outlet property="frameLoadDelegate" destination="XfG-lQ-9wD" id="IGd-kE-m5M"/>
+                                </connections>
+                            </webView>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="Oyu-qS-Kxz" userLabel="Back Button">
+                                <rect key="frame" x="40" y="839" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="b0F-SP-ikj"/>
+                                    <constraint firstAttribute="height" constant="45" id="bl7-nt-AKZ"/>
+                                </constraints>
+                                <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="chevronLeft" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="JWQ-L8-izB">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system" size="10"/>
+                                </buttonCell>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rRX-Mk-QO8" userLabel="Idle Timer">
+                                <rect key="frame" x="1283" y="846" width="111" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="107" id="ANV-ac-5QI"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" placeholderString="Idle Timer" id="P3O-hi-GAP">
+                                    <font key="font" metaFont="system" size="25"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" translatesAutoresizingMaskIntoConstraints="NO" id="93S-jy-SOa" userLabel="Forward Button">
+                                <rect key="frame" x="93" y="839" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="wVG-gF-35D"/>
+                                </constraints>
+                                <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="chevronRight" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="b17-bE-n6j">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system" size="10"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Oyu-qS-Kxz" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="40" placeholder="YES" id="00t-AE-cmw"/>
+                            <constraint firstItem="93S-jy-SOa" firstAttribute="centerY" secondItem="6Qd-da-trS" secondAttribute="centerY" placeholder="YES" id="3V4-bF-TJt"/>
+                            <constraint firstItem="Oyu-qS-Kxz" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="16" placeholder="YES" id="4MD-Ck-9yW"/>
+                            <constraint firstAttribute="bottom" secondItem="5Ij-RN-PWu" secondAttribute="bottom" placeholder="YES" id="6Dq-aH-WpQ"/>
+                            <constraint firstItem="93S-jy-SOa" firstAttribute="top" secondItem="Oyu-qS-Kxz" secondAttribute="top" placeholder="YES" id="D9J-Oa-TmN"/>
+                            <constraint firstAttribute="trailing" secondItem="rRX-Mk-QO8" secondAttribute="trailing" constant="48" placeholder="YES" id="Xbr-ge-qUc"/>
+                            <constraint firstItem="6Qd-da-trS" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="cXF-5A-l5K"/>
+                            <constraint firstItem="5Ij-RN-PWu" firstAttribute="top" secondItem="93S-jy-SOa" secondAttribute="bottom" constant="16" placeholder="YES" id="kIX-4T-KTG"/>
+                            <constraint firstItem="6Qd-da-trS" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="l2I-Yl-qki"/>
+                            <constraint firstItem="Oyu-qS-Kxz" firstAttribute="centerY" secondItem="6Qd-da-trS" secondAttribute="centerY" placeholder="YES" id="mpI-Ry-QQk"/>
+                            <constraint firstAttribute="trailing" secondItem="6Qd-da-trS" secondAttribute="trailing" placeholder="YES" id="nmX-zm-Ebf"/>
+                            <constraint firstItem="5Ij-RN-PWu" firstAttribute="top" secondItem="6Qd-da-trS" secondAttribute="bottom" id="ovm-00-EWK"/>
+                            <constraint firstItem="5Ij-RN-PWu" firstAttribute="top" secondItem="Oyu-qS-Kxz" secondAttribute="bottom" constant="16" placeholder="YES" id="qCh-Va-vIe"/>
+                            <constraint firstItem="6Qd-da-trS" firstAttribute="leading" secondItem="5Ij-RN-PWu" secondAttribute="leading" placeholder="YES" id="qHE-jE-VSp"/>
+                            <constraint firstItem="6Qd-da-trS" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" placeholder="YES" id="sEa-ya-2bu"/>
+                            <constraint firstItem="Oyu-qS-Kxz" firstAttribute="centerY" secondItem="rRX-Mk-QO8" secondAttribute="centerY" placeholder="YES" id="wgg-Yt-1BR"/>
+                            <constraint firstItem="93S-jy-SOa" firstAttribute="leading" secondItem="Oyu-qS-Kxz" secondAttribute="trailing" constant="8" symbolic="YES" placeholder="YES" id="xAf-QI-9Lj"/>
+                            <constraint firstItem="6Qd-da-trS" firstAttribute="trailing" secondItem="5Ij-RN-PWu" secondAttribute="trailing" placeholder="YES" id="xzb-Rp-HU7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Header" destination="6Qd-da-trS" id="6oT-zQ-By7"/>
+                        <outlet property="Main" destination="5Ij-RN-PWu" id="fnK-sD-G3t"/>
+                        <outlet property="backButton" destination="Oyu-qS-Kxz" id="lNN-6g-ZMw"/>
+                        <outlet property="forwardButton" destination="93S-jy-SOa" id="28k-6w-sKV"/>
+                        <outlet property="timer" destination="rRX-Mk-QO8" id="Hld-yH-Bct"/>
+                        <segue destination="p98-Js-Eh2" kind="custom" identifier="toSaver" customClass="CustomSegue" customModule="rWeb" customModuleProvider="target" id="Xi0-3G-eos"/>
+                    </connections>
+                </viewController>
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="961"/>
+        </scene>
+        <!--SaverView-->
+        <scene sceneID="sYD-ax-CT6">
+            <objects>
+                <viewController storyboardIdentifier="SaverView" id="p98-Js-Eh2" userLabel="SaverView" customClass="SaverView" customModule="rWeb" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" identifier="SaverView" id="IPH-nR-9UF">
+                        <rect key="frame" x="0.0" y="0.0" width="1440" height="900"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NiQ-mc-duG">
+                                <rect key="frame" x="0.0" y="0.0" width="1440" height="823"/>
+                                <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12" javaEnabled="NO" javaScriptCanOpenWindowsAutomatically="NO">
+                                    <nil key="identifier"/>
+                                </webPreferences>
+                                <connections>
+                                    <outlet property="UIDelegate" destination="p98-Js-Eh2" id="3H8-45-CDa"/>
+                                    <outlet property="frameLoadDelegate" destination="p98-Js-Eh2" id="LBS-O4-eNm"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="Saver" destination="NiQ-mc-duG" id="TlM-8F-4dn"/>
+                        <segue destination="XfG-lQ-9wD" kind="custom" identifier="toMain" customClass="CustomDismissal" customModule="rWeb" customModuleProvider="target" id="3EN-65-M7g"/>
+                    </connections>
+                </viewController>
+                <customObject id="Fts-hj-fg9" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717" y="961"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevronLeft" width="180" height="170"/>
+        <image name="chevronRight" width="180" height="170"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="3EN-65-M7g"/>
+    </inferredMetricsTieBreakers>
+</document>

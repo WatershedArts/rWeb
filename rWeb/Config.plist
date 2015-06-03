@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Custom Agent</key>
+	<string>someAgent</string>
+	<key>Main url</key>
+	<string>http://www.google.co.uk</string>
+	<key>Promotional url</key>
+	<string>http://www.google.co.uk</string>
+	<key>Header url</key>
+	<string>http://www.google.co.uk</string>
+	<key>Regex String</key>
+	<string>([-a-zA-Z0-9^\p{L}\p{C}\u00a1-\uffff@:%_\+.~#?&amp;//=]{2,256}){1}(\.[a-z]{2,4}){1}(\:[0-9]*)?(\/[-a-zA-Z0-9\u00a1-\uffff\(\)@:%,_\+.~#?&amp;//=]*)?([-a-zA-Z0-9\(\)@:%,_\+.~#?&amp;//=]*)?</string>
+	<key>HTML Zoom Value</key>
+	<string>zoom:115%</string>
+	<key>Standard Idle Time</key>
+	<integer>60</integer>
+	<key>iFrame Idle Time</key>
+	<integer>180</integer>
+	<key>Reset Time</key>
+	<integer>10</integer>
+	<key>Header Height</key>
+	<integer>75</integer>
+</dict>
+</plist>
