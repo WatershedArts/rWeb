@@ -8,6 +8,9 @@ The application was written in **Swift** and **Objective-C**.
 
 We have stripped the application down so that you can implement your own Kiosk.
 
+### What is the Catch?
+We haven't yet stopped Command-Q from quitting the application, so either use a keyboard with no command key, or disable the command key in OS X somehow. 
+
 ### What is in the Application?
 
 There are 2 View Controllers. The Main Controller and the Saver Controller.
