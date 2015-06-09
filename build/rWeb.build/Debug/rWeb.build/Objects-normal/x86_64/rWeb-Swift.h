@@ -136,6 +136,7 @@ SWIFT_CLASS("_TtC4rWeb9SaverView")
 @property (nonatomic) NSTimer * __nonnull idleTime;
 @property (nonatomic) NSTimer * __nonnull findFullscreen;
 @property (nonatomic, copy) NSString * __null_unspecified lastURL;
+@property (nonatomic, copy) NSArray * __null_unspecified saverConstraints;
 @property (nonatomic) IBOutlet WebView * __null_unspecified Saver;
 @property (nonatomic) WebView * __null_unspecified holdingView;
 - (void)viewDidLoad;

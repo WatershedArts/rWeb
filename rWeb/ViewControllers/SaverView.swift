@@ -23,7 +23,8 @@ class SaverView: NSViewController {
     var lastURL: String!
     var hasMainGotAnIFrame:Bool!
     var t: Int64!
-
+    var saverConstraints:[AnyObject]!
+    
     @IBOutlet var Saver: WebView!
     var holdingView: WebView!
         
@@ -44,7 +45,7 @@ class SaverView: NSViewController {
     func setNewViewConstraints() {
         
         // Saver View
-        var saverConstraints:[AnyObject] = [NSLayoutConstraint(item: self.Saver, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .Width, multiplier: 1.0, constant: newSize.width),NSLayoutConstraint(item: self.Saver, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: newSize.height-headerHeight),NSLayoutConstraint(item: self.Saver, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1.0, constant: 0),NSLayoutConstraint(item: self.Saver, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1.0, constant: headerHeight)]
+        saverConstraints = [NSLayoutConstraint(item: self.Saver, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .Width, multiplier: 1.0, constant: newSize.width),NSLayoutConstraint(item: self.Saver, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: newSize.height-headerHeight),NSLayoutConstraint(item: self.Saver, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1.0, constant: 0),NSLayoutConstraint(item: self.Saver, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1.0, constant: headerHeight)]
         
         self.view.addConstraints(saverConstraints)
     }
@@ -88,10 +89,14 @@ class SaverView: NSViewController {
             var htmlElement:DOMElement! = domDocument.getElementsByTagName("html").item(0) as! DOMElement
             
             if htmlElement.hasAttribute("fullscreen") {
-                self.Saver.frame.size.height = newSize.height
+                self.view.removeConstraints(saverConstraints)
+                
+                var saverConstraints1:[AnyObject] = [NSLayoutConstraint(item: self.Saver, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .Width, multiplier: 1.0, constant: newSize.width),NSLayoutConstraint(item: self.Saver, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: newSize.height),NSLayoutConstraint(item: self.Saver, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1.0, constant: 0),NSLayoutConstraint(item: self.Saver, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1.0, constant: 0)]
+                self.view.addConstraints(saverConstraints1)
+                self.view.updateConstraints()
             }
             else {
-                self.Saver.frame.size.height = newSize.height-headerHeight
+
             }
         }
     }

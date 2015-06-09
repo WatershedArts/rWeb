@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C577215D-5C86-4170-A0DF-2AF2EBFBFED7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>rWeb</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AFAC01CB51338E5156676B73ADADF9C32EB2CF5A</key>
+		<string>https://github.com/WatershedArts/rWeb.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>rWeb.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AFAC01CB51338E5156676B73ADADF9C32EB2CF5A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/WatershedArts/rWeb.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>AFAC01CB51338E5156676B73ADADF9C32EB2CF5A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AFAC01CB51338E5156676B73ADADF9C32EB2CF5A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>rWeb</string>
+		</dict>
+	</array>
+</dict>
+</plist>
